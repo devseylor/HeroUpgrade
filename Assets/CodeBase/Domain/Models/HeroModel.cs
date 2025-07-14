@@ -1,4 +1,4 @@
-namespace Domain.Models
+namespace CodeBase.Domain.Models
 {
     public class HeroModel
     {
@@ -9,7 +9,7 @@ namespace Domain.Models
             Level = level;
         }
 
-        public void Upgrade()
+        public void UpgradeHero()
         {
             Level++;
         }
