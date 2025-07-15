@@ -7,7 +7,7 @@ using CodeBase.Domain.Messages;
 
 namespace Infrastructure
 {
-    public class ProjectLifetimeScope : LifetimeScope
+    public class GameKernal : LifetimeScope
     {
         protected override void Configure(IContainerBuilder builder)
         {

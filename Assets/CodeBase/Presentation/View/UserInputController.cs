@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using MessagePipe;
 using CodeBase.Domain.Messages;
-using CodeBase.Domain.Messages;
 using VContainer;
 
 namespace Presentation
