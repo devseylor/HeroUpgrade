@@ -11,15 +11,10 @@ namespace Infrastructure
     {
         protected override void Configure(IContainerBuilder builder)
         {
-            var options = builder.RegisterMessagePipe();
-            builder.RegisterMessageBroker<HeroUpgradedMessage>(options);
-            builder.RegisterMessageBroker<HeroUpgradeInputMessage>(options);
-
             builder.Register<UpgradeHeroUseCase>(Lifetime.Singleton)
                    .As<IUpgradeHeroUseCase>();
 
             builder.RegisterComponentInHierarchy<HeroView>();
-            builder.RegisterComponentInHierarchy<UserInputController>();
 
             builder.RegisterEntryPoint<HeroPresenter>();
         }
