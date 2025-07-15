@@ -1,5 +1,16 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(250, 60, 60); width: 100%; height: 100%; opacity: 1; display: flex; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(255, 255, 255);">
-        <ui:VisualElement style="flex-grow: 1; width: 300px; height: 2327px; background-color: rgb(255, 200, 40);" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(114, 250, 60); width: 100%; height: 100%; opacity: 1; display: flex; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(255, 255, 255); flex-direction: column; flex-wrap: wrap-reverse; justify-content: center; align-items: center; align-self: center; align-content: flex-end;">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; width: 100%; height: 100%; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 300px; height: 300px; background-color: rgb(250, 32, 255); margin-right: 30px; align-items: center;">
+                <ui:Label text="EXP" name="ExperienceLabel" style="align-items: center; width: 100%; height: 100%; font-size: 94px; color: rgb(243, 201, 13);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 300px; height: 300px; background-color: rgb(255, 54, 40); margin-right: 30px; align-items: center;">
+                <ui:Label text="Gold" name="GoldLabel" style="align-items: center; width: 100%; height: 100%; font-size: 94px; color: rgb(243, 201, 13);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 300px; height: 300px; background-color: rgb(78, 40, 255); margin-right: 30px; align-items: center;">
+                <ui:Label text="LVL" name="LevelLabel" style="align-items: center; width: 100%; height: 100%; font-size: 94px; color: rgb(243, 201, 13);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="Upgrade" name="UpgradeButton" style="width: 300px; height: 300px; background-color: rgb(255, 245, 0); white-space: pre; font-size: 60px; color: rgb(161, 39, 120); flex-direction: column;" />
     </ui:VisualElement>
 </ui:UXML>
