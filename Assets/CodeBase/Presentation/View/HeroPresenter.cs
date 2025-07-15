@@ -1,8 +1,8 @@
-using CodeBase.Domain.Models;
 using UseCases;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using VContainer.Unity;
+using CodeBase.Domain.Models;
 
 namespace Presentation
 {
@@ -20,13 +20,26 @@ namespace Presentation
 
         public void Initialize()
         {
+            _ = InitializeAsync();
+        }
+
+        private async UniTask InitializeAsync()
+        {
             _hero = new HeroModel();
+            await UniTask.NextFrame();
             UpdateView();
 
             _view.UpgradeButton.clicked += async () =>
             {
-                await _upgradeUseCase.ExecuteAsync(_hero);
-                UpdateView();
+                try
+                {
+                    await _upgradeUseCase.ExecuteAsync(_hero);
+                    UpdateView();
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.LogError(ex.Message);
+                }
             };
         }
 
